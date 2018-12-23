@@ -1,22 +1,16 @@
 input_file = open("./part_2_input.txt", "r")
 strings_list = [i.strip() for i in input_file.readlines()]
 input_file.close()
-# Alright, jesus fuck this was annoying while drinking
-# So, this is what's happening. STOP LAUGHING AT ME!
+# So, this is what's happening.
 # You loop through the list.
 # On each loop you loop through the rest of it
 # Match each character position and the character
 # If it matches, add it to a list
 # If it doesn't, add one to differences in the two strings
-# We want to find that one singular fuck
-# Once we have that one singular fuck
+# We want to find that one difference
+# Once we have that one difference
 # Join the list
 # Gobhwam, you're done.
-# Fuck...
-# Okay, I've been trying to commit this for like 8 times, I can't get my password right.
-# Don't worry, I'll get there eventually.
-# Do you ever like fuck up and then stare at your terminal like @_@
-# That's me right now.
 found = False
 for x in range(len(strings_list)):
     for y in range(x, len(strings_list)):
