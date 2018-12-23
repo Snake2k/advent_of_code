@@ -1,22 +1,31 @@
 input_file = open("./part_2_input.txt", "r")
 strings_list = [i.strip() for i in input_file.readlines()]
 input_file.close()
+# Alright, jesus fuck this was annoying while drinking
+# So, this is what's happening. STOP LAUGHING AT ME!
+# You loop through the list.
+# On each loop you loop through the rest of it
+# Match each character position and the character
+# If it matches, add it to a list
+# If it doesn't, add one to differences in the two strings
+# We want to find that one singular fuck
+# Once we have that one singular fuck
+# Join the list
+# Gobhwam, you're done.
+# Fuck...
 found = False
 for x in range(len(strings_list)):
     for y in range(x, len(strings_list)):
         difference = 0
+        answer = ""
         for z in range(len(strings_list[x])):
             if strings_list[x][z] != strings_list[y][z]:
                 difference += 1
+            else:
+                answer += strings_list[x][z]
         if difference == 1:
-            s1 = set(strings_list[x])
-            s2 = set(strings_list[y])
-            sf = s1.intersection(s2)
-            a1 = ''.join(sf)
-            a2 = ''.join([i for i in strings_list[x] if i in sf])
             found = True
             break
     if found:
         break
-print(a1)
-print(a2)
+print(''.join(answer))
