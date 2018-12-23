@@ -13,6 +13,10 @@ input_file.close()
 # Join the list
 # Gobhwam, you're done.
 # Fuck...
+# Okay, I've been trying to commit this for like 8 times, I can't get my password right.
+# Don't worry, I'll get there eventually.
+# Do you ever like fuck up and then stare at your terminal like @_@
+# That's me right now.
 found = False
 for x in range(len(strings_list)):
     for y in range(x, len(strings_list)):
